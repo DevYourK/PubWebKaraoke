@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Karaoke Player</title>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="./def.js"></script>
+        <script src="./script/tsubasa.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Single+Day|Nanum+Gothic|Noto+Sans+KR|Noto+Sans+JP" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="./favicon.ico">    
+    </head>
+    
+    <body onkeydown="">
+        <div class="copyright" id="copyright">
+            <h1>저작권 안내(2021. 01. 06)</h1>
+            <div>
+                본 카라오케플레이어 1.5(이하 웹플레이어)의 소스코드와 프로그램은 Your_K가 제작했습니다.<br>
+                따라서, 프로그램을 촬영한 영상을 직/간접적으로 개조할 시 직접적인 대응을 취할 예정입니다<br><br>
+                음원의 저작권은 타사에 있으므로, 음원과 관련 된 대응은 출력되는 음원사에 문의하시기 바랍니다.
+            </div>
+        </div>
+        <div class="songinfo" id="songinfo">
+            <div class="pic"><!--AlbumTitle-->
+                <div class="info">
+                    <h1>승리의 NC</h1>
+                    <div>
+                        <h3>S' <span>강호연</span></h3>
+                        <h3>M' <span>DEVV</span></h3>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="screen" id="screen">
+            <div class="currentSong">
+                <span>현재곡-</span>
+                <span id="currentSong"></span>
+            </div>
+            <div class="lyrics">
+                <div class="big_box">
+                    <div class="box" id="top"></div>
+                    <div class="box" id="bottom"></div>
+                </div>
+            </div>
+        </div>
+        <div class="music" id="music">
+            <audio id="kara" src="music/NC.mp3"></audio>
+        </div>
+    </body>
+</html>

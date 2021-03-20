@@ -1,0 +1,223 @@
+*{
+    margin:0;
+    font-family:'Noto Sans', 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+}
+
+html {
+    width:100%;
+    height:100%;
+}
+body {
+    /*background-color:black;*/
+    background:url("./DSC2920.jpg") center center no-repeat;
+    background-size:cover;
+    background-position:center;
+
+    width:100%;
+    height:100%;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:1.2vw;
+}
+
+/* copyright information */
+    .copyright {
+        width:90%;
+        height:40%;
+        display:flex;
+        overflow:hidden;
+        color:white;
+        background-color:rgb(0, 0, 0, 0.8);
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        text-align:center;
+    }
+        .copyright > h1 {
+            display:inline-block;
+            font-family: 'Noto Sans KR';
+            text-align:center;
+        }
+
+
+/* Song-Information */
+    .songinfo {
+        width:0%;
+        height:100%;
+        display:flex;
+        position:absolute;
+        background-color:rgba(0, 0, 0, 0.35);
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        overflow:hidden;
+        z-index:1;
+    }
+        /* cover */
+        .songinfo > .pic {
+            width:30vw;
+            height:30vw;
+            border-radius:50%;
+            border:1vw solid rgb(255, 255, 255, 0.6);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:url("./NC Dinos.jpg") center center no-repeat;
+            background-size:35vw;
+        }
+            /* text */
+            .songinfo > .pic > .info {
+                width:100%;
+                height:100%;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                border-radius:50%;
+                text-align:center;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .songinfo > .pic > .info > *:nth-child(1) {
+                text-align:center;
+                font-size:4.5vw;
+                color:black;
+                padding-bottom:1.5vw;
+
+                overflow:hidden;
+                text-overflow:clip;
+                white-space:nowrap;
+
+                -webkit-text-stroke:0.5rem white;
+                paint-order:stroke fill;
+            }
+            .songinfo > .pic > .info > * {
+                height:20%;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                
+                font-size:1.5vw;
+                color:rgb(111, 226, 255);
+            }
+            .songinfo > .pic > .info > * span {
+                color:white;
+            }
+
+/* Base style of Karaoke-player */
+    .screen {
+        width:0%;
+        height:100%;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:center;
+        overflow:hidden;
+    }
+
+    /* show Current-Song information */
+        .currentSong {
+            padding:1rem;
+            align-self:flex-start;
+            display:inline-block;
+            font-size:2em;
+            color:white;
+        }
+        .currentSong > span:nth-child(1) {
+            padding:0.1em 0.5em 0.1em 0.5em;
+            margin:0.5em;
+            background-color:rgba(0, 0, 0, 0.5);
+        }
+
+    /* show lyrics */
+        .lyrics {
+            display:inline-block;
+            width:95%;
+            overflow:hidden;
+        }
+        .big_box {
+            width:100%;
+            display:inline-flex;
+            flex-direction:column;
+            align-items:flex-start;
+            padding-bottom:2em;
+        }
+        .big_box > :last-child{
+            align-self:flex-end;
+        }
+        .box {
+            width:60%;
+            display:inline-flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+
+        /* text group style */
+            .txtgroup {
+                display:inline-flex;
+                align-items:flex-end;
+                overflow:hidden;
+            }
+
+            .txtgroup > div {
+                display:flex;
+                flex-direction:column;
+            }
+            .txtgroup > div > .high {
+                align-self:center;
+            }
+
+            .title {
+                display:inline-block;
+                font-size:4em;
+                font-weight:bold;
+                color:white;
+                -webkit-text-stroke:0.5rem rgb(0, 163, 163);
+                paint-order:stroke fill;
+                position:absolute;
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow:clip;
+            }
+            .effect {
+                display:block;
+                width:0%;
+                font-size:4em;
+                font-weight:bold;
+                color:rgb(0, 163, 163);
+                -webkit-text-stroke:0.45rem white;
+                paint-order:stroke fill;
+                position: relative;
+                white-space:nowrap;
+                text-overflow:clip;
+                overflow:hidden;
+                transition:width 1s linear;
+            }
+
+            .high > .title, .high > .effect {
+                display:block;
+                font-size:1em;
+            }
+
+        /* korean pronunciation style */
+        .korean {
+            display:inline-block;
+            font-size:1.7em;
+            letter-spacing:.05em;
+            color:rgb(241, 177, 0);
+            -webkit-text-stroke:0.15em rgb(116, 85, 0);
+            paint-order:stroke fill;
+            font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    /* music-box */
+    .music {
+        width:0%;
+        height:0%;
+        overflow:hidden;
+    }
